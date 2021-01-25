@@ -1,0 +1,91 @@
+  [1m[35m (11.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateApiV1Bagels (20210124192942)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "api_v1_bagels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image" varchar, "description" varchar, "likes" integer, "quantity" integer, "price" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210124192942"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-24 19:30:40.647890"], ["updated_at", "2021-01-24 19:30:40.647890"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Everything Bagel"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/800x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_30330a0e-de12-446b-a095-0dfd968bee34.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-01-25 01:16:49.509337"], ["updated_at", "2021-01-25 01:16:49.509337"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sesame Seed Bagel"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_6aef42c0-58ad-4baa-ba2f-d9b31ccc0885.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-01-25 01:16:49.517336"], ["updated_at", "2021-01-25 01:16:49.517336"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Poppy Seed Bagel"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_20803d64-788d-4566-8236-9f4f65b42152.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-01-25 01:16:49.524197"], ["updated_at", "2021-01-25 01:16:49.524197"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Onion Bagel"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_aef71754-5846-4c2d-9370-9f918b9eb05b.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-01-25 01:16:49.531320"], ["updated_at", "2021-01-25 01:16:49.531320"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Plain Bagel"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0554f4a8-063a-47d7-83ff-425323c2c077.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-01-25 01:16:49.538467"], ["updated_at", "2021-01-25 01:16:49.538467"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Whole Wheat Bagel"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_b9a31c7f-974b-463a-bfb0-23189a626f92.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-01-25 01:16:49.545772"], ["updated_at", "2021-01-25 01:16:49.545772"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cinnamon Raisin Bagel"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_67481c46-b702-4cdc-8217-d14ebcb43068.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-01-25 01:16:49.553129"], ["updated_at", "2021-01-25 01:16:49.553129"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Toufayan Smart Bagel (gluten free)"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_96fe07f4-ec86-40da-b983-f4f077a6429e.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-01-25 01:16:49.562381"], ["updated_at", "2021-01-25 01:16:49.562381"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pumpernickel Bagel"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_041e3825-c798-4232-9d34-f6518cdf451c.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-01-25 01:16:49.570423"], ["updated_at", "2021-01-25 01:16:49.570423"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" ORDER BY "api_v1_bagels"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/api/v1/bagels" for ::1 at 2021-01-24 20:23:50 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::BagelsController#index as HTML
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 1.0ms | Allocations: 9253)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-01-24 20:25:08 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as HTML
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 1.4ms | Allocations: 8499)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-01-24 20:25:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
