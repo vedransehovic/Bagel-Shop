@@ -1,16 +1,17 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { reducer } from "./redux/reducer";
-import { createStore, compose, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import logger from "redux-logger";
 import "../node_modules/modern-normalize/modern-normalize.css";
 import React, { Component } from "react";
 import AdminContainer from "./containers/AdminContainer";
 import BagelContainer from "./containers/BagelContainer";
 import OrderContainer from "./containers/OrderContainer";
+import { connect } from "react-redux";
+import { getBagels } from "./actions/actionsCreator";
 
 class App extends Component {
+  componentDidMount() {
+    this.props.getBagels();
+  }
+
   render() {
     return (
       <div>
@@ -24,4 +25,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(null, { getBagels })(App);
