@@ -1,9 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Card, Button, InputGroup, FormControl } from "react-bootstrap";
 
 function AllBagels() {
   const bagels = useSelector((state) => state.bagels);
+  const order = useSelector((state) => state.order);
+  const addToOrder = useDispatch();
   return (
     <div>
       {bagels.map((bagel, index) => {
@@ -36,7 +38,12 @@ function AllBagels() {
                       key={bagel.id}
                       value={bagel.order}
                     />
-                    <Button variant="outline-secondary">Add</Button>
+                    <Button
+                      variant="outline-secondary"
+                      onClick={() => addToOrder(bagel)}
+                    >
+                      Add
+                    </Button>
                   </InputGroup>
                 </div>
               </Card.Body>

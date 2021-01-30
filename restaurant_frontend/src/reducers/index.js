@@ -1,10 +1,9 @@
 import { combineReducers } from "redux";
-import loggedReducer from "./isLogged";
-import bagelReducer from "./bagelReducer";
+import reducer from "./reducer";
+import order from "./orderReducer";
 
 const allReducers = combineReducers({
-  counter: bagelReducer,
-  isLogged: loggedReducer,
+  bagels: reducer,
 });
 
 export default allReducers;

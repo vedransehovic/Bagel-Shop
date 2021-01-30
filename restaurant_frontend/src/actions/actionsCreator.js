@@ -14,5 +14,3 @@ export const getBagels = () => {
       });
   };
 };
-
-//data.map(bagel => {...bagel, order:})
