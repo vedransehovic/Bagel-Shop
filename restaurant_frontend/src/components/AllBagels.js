@@ -1,11 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Card, Button, InputGroup, FormControl } from "react-bootstrap";
+import { addToOrder } from "../actions/actionsCreator";
 
 function AllBagels() {
   const bagels = useSelector((state) => state.bagels);
   const order = useSelector((state) => state.order);
-  const addToOrder = useDispatch();
+  const dispatch = useDispatch();
   return (
     <div>
       {bagels.map((bagel, index) => {
@@ -40,7 +41,7 @@ function AllBagels() {
                     />
                     <Button
                       variant="outline-secondary"
-                      onClick={() => addToOrder(bagel)}
+                      onClick={() => dispatch(addToOrder(bagel))}
                     >
                       Add
                     </Button>

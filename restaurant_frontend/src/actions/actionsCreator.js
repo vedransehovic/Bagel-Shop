@@ -5,12 +5,19 @@ export const getBagels = () => {
       .then((data) => {
         const amendedBagels = data.map((bagel) => ({
           ...bagel,
-          order: 0,
+          ordered: 0,
         }));
         dispatch({
           type: "SET_BAGELS",
           payload: amendedBagels,
         });
       });
+  };
+};
+
+export const addToOrder = (bagel) => {
+  return {
+    type: "ADDTOORDER",
+    payload: { bagel },
   };
 };

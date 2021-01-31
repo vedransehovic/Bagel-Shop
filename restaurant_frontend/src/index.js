@@ -11,10 +11,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-// const rootReducer = combineReducers({
-//   bagels: reducer,
-//   order: orderReducer,
-// });
 
 const store = createStore(
   reducer,
