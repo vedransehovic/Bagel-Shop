@@ -15,9 +15,23 @@ export const getBagels = () => {
   };
 };
 
-export const addToOrder = (bagel) => {
+export const addToOrder = (bagel, index) => {
   return {
     type: "ADDTOORDER",
-    payload: { bagel },
+    payload: { bagel, index },
+  };
+};
+
+export const removeFromOrder = (bagel, index) => {
+  return {
+    type: "REMOVEFROMORDER",
+    payload: { bagel, index },
+  };
+};
+
+export const like = (bagel, index) => {
+  return {
+    type: "LIKE",
+    payload: { bagel, index },
   };
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import AllBagels from "../components/AllBagels";
+import Order from "../components/Order";
 import { Container, Row, Col } from "react-bootstrap";
 
 function BagelContainer() {
@@ -12,6 +13,7 @@ function BagelContainer() {
         </Col>
         <Col>
           <h1>ORDER CONTAINER</h1>
+          <Order />
         </Col>
       </Row>
     </Container>
