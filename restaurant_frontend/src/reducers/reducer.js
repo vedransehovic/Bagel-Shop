@@ -14,10 +14,21 @@ export const reducer = (state = initialState, action) => {
       let bagels = [...state.bagels];
       let bagel = { ...action.payload.bagel };
       let order = state.order;
+      //is that bagel already in the order?
+      const alreadyInOrder = order.find(
+        (orderedBagel) => orderedBagel.id === bagel.id
+      );
       let i = action.payload.index;
       let newBagel = { ...bagel, ordered: bagel.ordered + 1 };
       let newBagels = [...bagels.slice(0, i), newBagel, ...bagels.slice(i + 1)];
-      order.push(newBagel);
+
+      // if no, add it
+      if (!alreadyInOrder) {
+        order = [...order, { ...bagel, ordered: 1 }];
+      } else {
+        alreadyInOrder.ordered++;
+      }
+
       return { ...state, bagels: newBagels, order: order };
 
     case "REMOVEFROMORDER":
@@ -30,7 +41,11 @@ export const reducer = (state = initialState, action) => {
         newBagel_,
         ...bagels_.slice(i_ + 1),
       ];
-      return { ...state, bagels: newBagels_, order: newBagel_ };
+      return {
+        ...state,
+        bagels: newBagels_,
+        order: [...state.order, newBagel_],
+      };
 
     case "LIKE":
       let iLike = action.payload.index;

@@ -10,7 +10,10 @@ function Order() {
       {order.map((singleOrder, index) => {
         return (
           <div key={index}>
-            <h2>{singleOrder.name}</h2>
+            <h3>
+              {singleOrder.name} - {singleOrder.ordered} x $
+              {singleOrder.price / 100}
+            </h3>
           </div>
         );
       })}
