@@ -13,7 +13,7 @@ export const reducer = (state = initialState, action) => {
     case "ADDTOORDER":
       let bagels = [...state.bagels];
       let bagel = { ...action.payload.bagel };
-      let order = state.order;
+      let order = [...state.order];
       //is that bagel already in the order?
       const alreadyInOrder = order.find(
         (orderedBagel) => orderedBagel.id === bagel.id
@@ -48,16 +48,16 @@ export const reducer = (state = initialState, action) => {
       };
 
     case "LIKE":
-      let iLike = action.payload.index;
+      //let iLike = action.payload.index;
       let bagelsLike = [...state.bagels];
-      let bagelLike = { ...action.payload.bagel };
-      let likedBagel = { ...bagelLike, likes: bagelLike.likes + 1 };
-      let likedBagels = [
-        ...bagelsLike.slice(0, iLike),
-        likedBagel,
-        ...bagelsLike.slice(iLike + 1),
-      ];
-      return { ...state, bagels: likedBagels };
+      //let bagelLike = { ...action.payload.bagel };
+      //let likedBagel = { ...bagelLike, likes: bagelLike.likes + 1 };
+      // let likedBagels = [
+      //   ...bagelsLike.slice(0, iLike),
+      //   likedBagel,
+      //   ...bagelsLike.slice(iLike + 1),
+      // ];
+      return { ...state, bagels: bagelsLike };
 
     default:
       return { ...state };

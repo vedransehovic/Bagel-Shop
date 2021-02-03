@@ -6,7 +6,9 @@ class Api::V1::BagelsController < ApplicationController
 
     def update
         @bagel = Api::V1::Bagel.find_by_id(params[:id])
-        @property.update(params)
+        @likes = @bagel.likes
+        @likes = @likes + 1
+        @bagel.update(likes: @likes )
         render json: @bagel, except: [:created_at, :updated_at, :description]
     end
 end

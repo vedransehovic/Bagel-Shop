@@ -1,7 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Card, Button, InputGroup, FormControl, Badge } from "react-bootstrap";
-import { addToOrder, removeFromOrder, like } from "../actions/actionsCreator";
+import {
+  addToOrder,
+  removeFromOrder,
+  updateBagel,
+} from "../actions/actionsCreator";
 
 function AllBagels() {
   const bagels = useSelector((state) => state.bagels);
@@ -22,7 +26,7 @@ function AllBagels() {
                 </Card.Text>
                 <Button
                   variant="primary"
-                  onClick={() => dispatch(like(bagel, index))}
+                  onClick={() => dispatch(updateBagel(bagel.id, index))}
                 >
                   Vote Favorite &nbsp;
                   <Badge variant="light">{bagel.likes}</Badge>

@@ -15,20 +15,22 @@ export const getBagels = () => {
   };
 };
 
-export const updateBagel = (id) => {
+export const updateBagel = (id, index) => {
   return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/bagels/${id}`, {
       method: "PATCH",
-      headers: {"Content-type": "application/json"},
-      body: JSON.stringify({id})
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({ id }),
     })
       .then((res) => res.json())
       .then((data) => {
-        //
+        dispatch({
+          type: "LIKE",
+          payload: { data, index },
         });
-    
-  }
-}
+      });
+  };
+};
 
 export const addToOrder = (bagel, index) => {
   return {
