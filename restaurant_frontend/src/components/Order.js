@@ -1,9 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import {updateOrder } from "../actions/actionsCreator";
 import { Button } from "react-bootstrap";
 
 function Order() {
   const order = useSelector((state) => state.order);
+  const dispatch = useDispatch()
   let total = 0;
 
   return (
@@ -20,7 +22,7 @@ function Order() {
         );
       })}
       <h1>Total: ${total / 100}</h1>
-      <Button>PURCHASE</Button>
+      <Button onClick={() => dispatch(updateOrder(order))}>PURCHASE</Button>
     </div>
   );
 }

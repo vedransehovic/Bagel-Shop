@@ -48,16 +48,16 @@ export const reducer = (state = initialState, action) => {
       };
 
     case "LIKE":
-      //let iLike = action.payload.index;
+      let iLike = action.payload.index;
       let bagelsLike = [...state.bagels];
-      //let bagelLike = { ...action.payload.bagel };
-      //let likedBagel = { ...bagelLike, likes: bagelLike.likes + 1 };
-      // let likedBagels = [
-      //   ...bagelsLike.slice(0, iLike),
-      //   likedBagel,
-      //   ...bagelsLike.slice(iLike + 1),
-      // ];
-      return { ...state, bagels: bagelsLike };
+      let bagelLike = {...bagelsLike.find((bagel) => (bagel.id === action.payload.data.id))};
+      bagelLike.likes++
+      let likedBagels = [
+        ...bagelsLike.slice(0, iLike),
+        bagelLike,
+        ...bagelsLike.slice(iLike + 1),
+      ];
+      return { ...state, bagels: likedBagels };
 
     default:
       return { ...state };

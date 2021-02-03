@@ -32,6 +32,16 @@ export const updateBagel = (id, index) => {
   };
 };
 
+export const updateOrder = (items) => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/api/v1/bagels`, {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({ order: {items}}),
+    })
+}
+}
+
 export const addToOrder = (bagel, index) => {
   return {
     type: "ADDTOORDER",
