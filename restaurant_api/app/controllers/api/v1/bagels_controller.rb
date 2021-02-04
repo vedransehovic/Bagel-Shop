@@ -5,22 +5,23 @@ class Api::V1::BagelsController < ApplicationController
     end
 
     def update
-        if params[:order] 
-            order_params[:items].map
-            @bagels = Api::V1::Bagel.update_all(order_params[:items])
-            byebug
+    if params[:item] 
+            @bagel = Api::V1::Bagel.find_by_id(params[:id]) 
+            @bagel.update(quantity: @bagel.quantity - params[:item][:ordered])     
     else
         @bagel = Api::V1::Bagel.find_by_id(params[:id])
         @likes = @bagel.likes
         @likes = @likes + 1
         @bagel.update(likes: @likes )
-        render json: @bagel, except: [:created_at, :updated_at, :description]
     end
+
+    render json: @bagel, except: [:created_at, :updated_at, :description]
+
     end 
 private
 
 def order_params
-    params.require(:order).permit!
+    params.require(:item).permit!
 end
 
 end

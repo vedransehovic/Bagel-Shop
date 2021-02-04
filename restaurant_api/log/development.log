@@ -4377,3 +4377,551 @@ Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 7
 NoMethodError (undefined method `%' for #<ActionController::Parameters:0x00007fe6d8a32070>):
   
 app/controllers/api/v1/bagels_controller.rb:9:in `update'
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:14:30 -0500
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.5ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 7.9ms | ActiveRecord: 1.3ms | Allocations: 8877)
+
+
+Started PATCH "/api/v1/bagels/1" for ::1 at 2021-02-03 18:14:45 -0500
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"id"=>"1", "bagel"=>{"id"=>"1"}}
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:13:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[36mApi::V1::Bagel Update (1.0ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "likes" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["likes", 17], ["updated_at", "2021-02-03 23:14:45.877865"], ["id", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+Completed 200 OK in 33ms (Views: 0.2ms | ActiveRecord: 10.8ms | Allocations: 6885)
+
+
+Started PATCH "/api/v1/bagels/2" for ::1 at 2021-02-03 18:14:47 -0500
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"id"=>"2", "bagel"=>{"id"=>"2"}}
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:13:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[36mApi::V1::Bagel Update (1.0ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "likes" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["likes", 12], ["updated_at", "2021-02-03 23:14:47.687097"], ["id", 2]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 7.0ms | Allocations: 6457)
+
+
+Started PATCH "/api/v1/bagels/2" for ::1 at 2021-02-03 18:14:48 -0500
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"id"=>"2", "bagel"=>{"id"=>"2"}}
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:13:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[36mApi::V1::Bagel Update (7.4ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "likes" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["likes", 13], ["updated_at", "2021-02-03 23:14:48.055561"], ["id", 2]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 13.4ms | Allocations: 9387)
+
+
+Started PATCH "/api/v1/bagels/3" for ::1 at 2021-02-03 18:14:50 -0500
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"id"=>"3", "bagel"=>{"id"=>"3"}}
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:13:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[36mApi::V1::Bagel Update (7.0ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "likes" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["likes", 6], ["updated_at", "2021-02-03 23:14:50.462840"], ["id", 3]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 12.5ms | Allocations: 6870)
+
+
+Started PATCH "/api/v1/bagels/3" for ::1 at 2021-02-03 18:14:50 -0500
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"id"=>"3", "bagel"=>{"id"=>"3"}}
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:13:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[36mApi::V1::Bagel Update (1.2ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "likes" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["likes", 7], ["updated_at", "2021-02-03 23:14:50.606044"], ["id", 3]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 6.4ms | Allocations: 7736)
+
+
+Started PATCH "/api/v1/bagels/1" for ::1 at 2021-02-03 18:29:20 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"id"=>"1", "bagel"=>{"id"=>"1"}}
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:13:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[36mApi::V1::Bagel Update (6.9ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "likes" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["likes", 18], ["updated_at", "2021-02-03 23:29:20.356029"], ["id", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 15.0ms | Allocations: 6216)
+
+
+Started PATCH "/api/v1/bagels/1" for ::1 at 2021-02-03 18:29:20 -0500
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"id"=>"1", "bagel"=>{"id"=>"1"}}
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:13:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[36mApi::V1::Bagel Update (1.4ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "likes" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["likes", 19], ["updated_at", "2021-02-03 23:29:20.517056"], ["id", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 7.1ms | Allocations: 6828)
+
+
+Started PATCH "/api/v1/bagels/1" for ::1 at 2021-02-03 18:29:20 -0500
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"id"=>"1", "bagel"=>{"id"=>"1"}}
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:13:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[36mApi::V1::Bagel Update (0.9ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "likes" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["likes", 20], ["updated_at", "2021-02-03 23:29:20.686082"], ["id", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:16:in `update'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 6.6ms | Allocations: 6799)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:32:05 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.3ms | Allocations: 2024)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:32:14 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.3ms | Allocations: 2001)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:32:45 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 2001)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:33:26 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 2001)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:33:29 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 2003)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:33:41 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:33:51 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:35:00 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:35:13 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:35:16 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.5ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:35:54 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:35:54 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:35:57 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:36:14 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:36:15 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.8ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:36:24 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:37:09 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:37:15 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:37:27 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:37:41 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:43:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 30.1ms | ActiveRecord: 3.0ms | Allocations: 8486)
+
+
+Started PATCH "/api/v1/bagels/1" for ::1 at 2021-02-03 18:43:08 -0500
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"id"=>"1", "bagel"=>{"id"=>"1"}}
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:12:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:15:in `update'
+  [1m[36mApi::V1::Bagel Update (1.0ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "likes" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["likes", 21], ["updated_at", "2021-02-03 23:43:08.648224"], ["id", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:15:in `update'
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:15:in `update'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 17.5ms | Allocations: 5336)
+
+
+Started PATCH "/api/v1/bagels/1" for ::1 at 2021-02-03 18:43:08 -0500
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"id"=>"1", "bagel"=>{"id"=>"1"}}
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:12:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:15:in `update'
+  [1m[36mApi::V1::Bagel Update (1.4ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "likes" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["likes", 22], ["updated_at", "2021-02-03 23:43:08.790490"], ["id", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:15:in `update'
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:15:in `update'
+Completed 200 OK in 26ms (Views: 0.8ms | ActiveRecord: 11.6ms | Allocations: 5087)
+
+
+Started PATCH "/api/v1/bagels/1" for ::1 at 2021-02-03 18:43:11 -0500
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"item"=>{"id"=>1, "name"=>"Everything Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/800x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_30330a0e-de12-446b-a095-0dfd968bee34.jpg", "likes"=>22, "quantity"=>10, "price"=>119, "ordered"=>3}, "id"=>"1", "bagel"=>{}}
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[36mApi::V1::Bagel Update (7.2ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 7], ["updated_at", "2021-02-03 23:43:11.815642"], ["id", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Completed 204 No Content in 27ms (ActiveRecord: 15.9ms | Allocations: 4998)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:44:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 2.2ms | Allocations: 8483)
+
+
+Started PATCH "/api/v1/bagels/1" for ::1 at 2021-02-03 18:45:03 -0500
+Started PATCH "/api/v1/bagels/2" for ::1 at 2021-02-03 18:45:03 -0500
+Processing by Api::V1::BagelsController#update as */*
+Started PATCH "/api/v1/bagels/3" for ::1 at 2021-02-03 18:45:03 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Parameters: {"item"=>{"id"=>1, "name"=>"Everything Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/800x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_30330a0e-de12-446b-a095-0dfd968bee34.jpg", "likes"=>22, "quantity"=>7, "price"=>119, "ordered"=>3}, "id"=>"1", "bagel"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#update as */*
+  [1m[36mApi::V1::Bagel Load (0.5ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"item"=>{"id"=>2, "name"=>"Sesame Seed Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_6aef42c0-58ad-4baa-ba2f-d9b31ccc0885.jpg", "likes"=>13, "quantity"=>10, "price"=>119, "ordered"=>1}, "id"=>"2", "bagel"=>{}}
+  [1m[36mApi::V1::Bagel Load (0.5ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+Processing by Api::V1::BagelsController#update as */*
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Parameters: {"item"=>{"id"=>3, "name"=>"Poppy Seed Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_20803d64-788d-4566-8236-9f4f65b42152.jpg", "likes"=>7, "quantity"=>10, "price"=>119, "ordered"=>2}, "id"=>"3", "bagel"=>{}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[36mApi::V1::Bagel Update (2.3ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 9], ["updated_at", "2021-02-03 23:45:03.259937"], ["id", 2]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[36mApi::V1::Bagel Load (0.6ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  [1m[36mApi::V1::Bagel Update (5044.8ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 4], ["updated_at", "2021-02-03 23:45:03.257467"], ["id", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[36mApi::V1::Bagel Update (1.2ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 8], ["updated_at", "2021-02-03 23:45:08.349898"], ["id", 3]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Completed 200 OK in 5130ms (Views: 0.3ms | ActiveRecord: 11.1ms | Allocations: 13712)
+
+
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Completed 500 Internal Server Error in 5168ms (ActiveRecord: 5045.5ms | Allocations: 18305)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Completed 200 OK in 5260ms (Views: 0.3ms | ActiveRecord: 12.7ms | Allocations: 117677)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:48:01 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 2.2ms | Allocations: 8483)
+
+
+Started PATCH "/api/v1/bagels/1" for ::1 at 2021-02-03 18:48:07 -0500
+Started PATCH "/api/v1/bagels/2" for ::1 at 2021-02-03 18:48:07 -0500
+Processing by Api::V1::BagelsController#update as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Parameters: {"item"=>{"id"=>1, "name"=>"Everything Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/800x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_30330a0e-de12-446b-a095-0dfd968bee34.jpg", "likes"=>22, "quantity"=>7, "price"=>119, "ordered"=>2}, "id"=>"1", "bagel"=>{}}
+Processing by Api::V1::BagelsController#update as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"item"=>{"id"=>2, "name"=>"Sesame Seed Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_6aef42c0-58ad-4baa-ba2f-d9b31ccc0885.jpg", "likes"=>13, "quantity"=>9, "price"=>119, "ordered"=>2}, "id"=>"2", "bagel"=>{}}
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  [1m[36mApi::V1::Bagel Update (7.7ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 5], ["updated_at", "2021-02-03 23:48:07.664188"], ["id", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[36mApi::V1::Bagel Update (3.0ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 7], ["updated_at", "2021-02-03 23:48:07.674897"], ["id", 2]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Completed 200 OK in 91664ms (Views: 0.5ms | ActiveRecord: 10.6ms | Allocations: 56451)
+
+
+Completed 200 OK in 91669ms (Views: 0.7ms | ActiveRecord: 16.4ms | Allocations: 57908)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:49:59 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 9.8ms | ActiveRecord: 3.0ms | Allocations: 8869)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:50:30 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.5ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 2017)
+
+
+Started PATCH "/api/v1/bagels/4" for ::1 at 2021-02-03 18:50:43 -0500
+Started PATCH "/api/v1/bagels/5" for ::1 at 2021-02-03 18:50:43 -0500
+Processing by Api::V1::BagelsController#update as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Parameters: {"item"=>{"id"=>4, "name"=>"Onion Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_aef71754-5846-4c2d-9370-9f918b9eb05b.jpg", "likes"=>2, "quantity"=>10, "price"=>119, "ordered"=>1}, "id"=>"4", "bagel"=>{}}
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"item"=>{"id"=>5, "name"=>"Plain Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0554f4a8-063a-47d7-83ff-425323c2c077.jpg", "likes"=>6, "quantity"=>10, "price"=>119, "ordered"=>1}, "id"=>"5", "bagel"=>{}}
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[36mApi::V1::Bagel Update (7.0ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 9], ["updated_at", "2021-02-03 23:50:43.385864"], ["id", 5]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (16.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mApi::V1::Bagel Update (5064.2ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 9], ["updated_at", "2021-02-03 23:50:43.377082"], ["id", 4]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Completed 500 Internal Server Error in 5122ms (ActiveRecord: 5064.7ms | Allocations: 17799)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Completed 200 OK in 51389ms (Views: 0.8ms | ActiveRecord: 24.2ms | Allocations: 146044)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:53:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.6ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 42.9ms | ActiveRecord: 2.7ms | Allocations: 8493)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:53:19 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started PATCH "/api/v1/bagels/4" for ::1 at 2021-02-03 18:53:29 -0500
+Started PATCH "/api/v1/bagels/5" for ::1 at 2021-02-03 18:53:29 -0500
+Processing by Api::V1::BagelsController#update as */*
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Parameters: {"item"=>{"id"=>4, "name"=>"Onion Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_aef71754-5846-4c2d-9370-9f918b9eb05b.jpg", "likes"=>2, "quantity"=>10, "price"=>119, "ordered"=>1}, "id"=>"4", "bagel"=>{}}
+Processing by Api::V1::BagelsController#update as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Parameters: {"item"=>{"id"=>5, "name"=>"Plain Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0554f4a8-063a-47d7-83ff-425323c2c077.jpg", "likes"=>6, "quantity"=>9, "price"=>119, "ordered"=>1}, "id"=>"5", "bagel"=>{}}
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[36mApi::V1::Bagel Update (8.2ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 9], ["updated_at", "2021-02-03 23:53:29.205747"], ["id", 4]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[36mApi::V1::Bagel Update (5044.8ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 8], ["updated_at", "2021-02-03 23:53:29.211522"], ["id", 5]]
+Completed 200 OK in 5099ms (Views: 0.9ms | ActiveRecord: 16.4ms | Allocations: 9126)
+
+
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Completed 500 Internal Server Error in 5104ms (ActiveRecord: 5045.3ms | Allocations: 12768)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 18:57:01 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.6ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 2024)
+
+
+Started PATCH "/api/v1/bagels/4" for ::1 at 2021-02-03 18:57:13 -0500
+Processing by Api::V1::BagelsController#update as */*
+Started PATCH "/api/v1/bagels/6" for ::1 at 2021-02-03 18:57:13 -0500
+  Parameters: {"item"=>{"id"=>4, "name"=>"Onion Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_aef71754-5846-4c2d-9370-9f918b9eb05b.jpg", "likes"=>2, "quantity"=>9, "price"=>119, "ordered"=>1}, "id"=>"4", "bagel"=>{}}
+Processing by Api::V1::BagelsController#update as */*
+  Parameters: {"item"=>{"id"=>6, "name"=>"Whole Wheat Bagel", "image"=>"https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_b9a31c7f-974b-463a-bfb0-23189a626f92.jpg", "likes"=>0, "quantity"=>10, "price"=>119, "ordered"=>1}, "id"=>"6", "bagel"=>{}}
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  ↳ app/controllers/api/v1/bagels_controller.rb:9:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[36mApi::V1::Bagel Update (2.3ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 8], ["updated_at", "2021-02-03 23:57:13.373838"], ["id", 4]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mApi::V1::Bagel Update (5046.4ms)[0m  [1m[33mUPDATE "api_v1_bagels" SET "quantity" = ?, "updated_at" = ? WHERE "api_v1_bagels"."id" = ?[0m  [["quantity", 9], ["updated_at", "2021-02-03 23:57:13.375141"], ["id", 6]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Completed 200 OK in 5089ms (Views: 0.2ms | ActiveRecord: 17.8ms | Allocations: 13042)
+
+
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Completed 500 Internal Server Error in 5091ms (ActiveRecord: 5046.8ms | Allocations: 13641)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/api/v1/bagels_controller.rb:10:in `update'
+Started GET "/api/v1/bagels" for ::1 at 2021-02-03 19:02:17 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 1999)
+
+

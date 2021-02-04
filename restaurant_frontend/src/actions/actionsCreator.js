@@ -32,15 +32,22 @@ export const updateBagel = (id, index) => {
   };
 };
 
-export const updateOrder = (items) => {
+export const updateOrder = (order) => {
   return (dispatch) => {
-    fetch(`http://localhost:3000/api/v1/bagels`, {
-      method: "PATCH",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify({ order: {items}}),
-    })
-}
-}
+    const promises = order.map((item) => {
+      return fetch(`http://localhost:3000/api/v1/bagels/${item.id}`, {
+        method: "PATCH",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({ item }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          return data;
+        });
+    });
+    Promise.all(promises).then((bagels) => console.log(bagels)); //dispatch action here
+  };
+};
 
 export const addToOrder = (bagel, index) => {
   return {
