@@ -3,7 +3,7 @@ import "../node_modules/modern-normalize/modern-normalize.css";
 import React, { Component } from "react";
 import AdminContainer from "./containers/AdminContainer";
 import BagelContainer from "./containers/BagelContainer";
-import OrderContainer from "./containers/OrderContainer";
+import TopBagelsContainer from "./containers/TopBagelsContainer";
 import { connect } from "react-redux";
 import { getBagels } from "./actions/actionsCreator";
 
@@ -17,7 +17,7 @@ class App extends Component {
       <div>
         <Router>
           <Route exact path="/" component={BagelContainer} />
-          <Route exact path="/order" component={OrderContainer} />
+          <Route exact path="/top" component={TopBagelsContainer} />
           <Route exact path="/admin" component={AdminContainer} />
         </Router>
       </div>
