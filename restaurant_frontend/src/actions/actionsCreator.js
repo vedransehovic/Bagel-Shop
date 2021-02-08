@@ -32,6 +32,33 @@ export const updateBagel = (id, index) => {
   };
 };
 
+export const deleteBagel = (id, index) => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/api/v1/bagels/${id}`, {
+      method: "DELETE",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({ id }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const amendedBagels = data.map((bagel) => ({
+          ...bagel,
+          ordered: 0,
+        }));
+        dispatch({
+          type: "SET_BAGELS",
+          payload: amendedBagels,
+        });
+      });
+  };
+};
+
+export const createBagel = (e) => {
+  e.preventDefault();
+  debugger;
+  console.log(e);
+};
+
 export const updateOrder = (order) => {
   return (dispatch) => {
     const promises = order.map((item) => {

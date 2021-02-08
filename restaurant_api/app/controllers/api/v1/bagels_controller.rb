@@ -4,6 +4,11 @@ class Api::V1::BagelsController < ApplicationController
         render json: @bagels, except: [:created_at, :updated_at, :description]
     end
 
+    def create
+        @production = Production.new(production_params)
+        @production.save
+    end
+
     def update
     if params[:item] 
             @bagel = Api::V1::Bagel.find_by_id(params[:id]) 
@@ -18,10 +23,24 @@ class Api::V1::BagelsController < ApplicationController
     render json: @bagel, except: [:created_at, :updated_at, :description]
 
     end 
+
+
+    def destroy 
+        @bagel = Api::V1::Bagel.find_by_id(params[:id])
+        @bagel.delete
+        @bagels = Api::V1::Bagel.all
+        render json: @bagels, except: [:created_at, :updated_at, :description]    
+    end
+
+    
 private
 
 def order_params
     params.require(:item).permit!
+end
+
+def bagel_params
+    params.require(:bagel).permit(:name, :image, :quantity, :price)
 end
 
 end

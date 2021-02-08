@@ -1,9 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { Card } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
+import { Card, Button } from "react-bootstrap";
+import { deleteBagel } from "../actions/actionsCreator";
 
 function Admin() {
   const bagels = useSelector((state) => state.bagels);
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -15,7 +17,10 @@ function Admin() {
               <Card.Body>
                 <Card.Title>{bagel.name}</Card.Title>
                 <Card.Text></Card.Text>
-                <h1>Votes: {bagel.likes}</h1>
+                <Button>Edit</Button>&nbsp;
+                <Button onClick={() => dispatch(deleteBagel(bagel.id, index))}>
+                  Delete
+                </Button>
                 <br />
                 <br />
               </Card.Body>

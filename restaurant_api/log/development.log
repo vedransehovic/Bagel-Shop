@@ -5440,3 +5440,356 @@ Processing by Api::V1::BagelsController#index as */*
 Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 2000)
 
 
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 14:11:51 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 14:12:43 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 14:13:37 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 14:33:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 2026)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 14:33:40 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 14:34:26 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:38:16 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 8069)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:39:42 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:39:45 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:39:46 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:40:00 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:41:55 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:50:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 0.4ms | Allocations: 8069)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:54:14 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 1.5ms | Allocations: 8483)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:55:50 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:56:03 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 2001)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:56:06 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:56:09 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 17:57:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 1.6ms | Allocations: 8448)
+
+
+Started DELETE "/api/v1/bagels/9" for ::1 at 2021-02-07 17:57:40 -0500
+Processing by Api::V1::BagelsController#destroy as */*
+  Parameters: {"id"=>"9", "bagel"=>{"id"=>"9"}}
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ (byebug):1:in `destroy'
+  [1m[36mCACHE Api::V1::Bagel Load (0.0ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:25:in `destroy'
+  [1m[36mApi::V1::Bagel Destroy (16.1ms)[0m  [1m[31mDELETE FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:26:in `destroy'
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:28:in `destroy'
+Completed 200 OK in 78165ms (Views: 3.3ms | ActiveRecord: 16.7ms | Allocations: 54727)
+
+
+Started DELETE "/api/v1/bagels/8" for ::1 at 2021-02-07 18:00:14 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#destroy as */*
+  Parameters: {"id"=>"8", "bagel"=>{"id"=>"8"}}
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:24:in `destroy'
+  [1m[36mApi::V1::Bagel Destroy (11.1ms)[0m  [1m[31mDELETE FROM "api_v1_bagels" WHERE "api_v1_bagels"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/api/v1/bagels_controller.rb:25:in `destroy'
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:27:in `destroy'
+Completed 200 OK in 40ms (Views: 10.8ms | ActiveRecord: 12.9ms | Allocations: 15028)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Toufayan Smart Bagel (gluten free)"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_96fe07f4-ec86-40da-b983-f4f077a6429e.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-02-07 23:01:09.771198"], ["updated_at", "2021-02-07 23:01:09.771198"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::Bagel Create (0.9ms)[0m  [1m[32mINSERT INTO "api_v1_bagels" ("name", "image", "likes", "quantity", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pumpernickel Bagel"], ["image", "https://d2d8wwwkmhfcva.cloudfront.net/600x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_041e3825-c798-4232-9d34-f6518cdf451c.jpg"], ["likes", 0], ["quantity", 10], ["price", 119], ["created_at", "2021-02-07 23:01:09.778782"], ["updated_at", "2021-02-07 23:01:09.778782"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 18:01:40 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 18:06:19 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:14:27 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.5ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 8.8ms | ActiveRecord: 0.5ms | Allocations: 8068)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:14:28 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:14:34 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:14:34 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:14:37 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:15:41 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:16:10 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:16:19 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:16:33 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:16:52 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.4ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:16:58 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:19:30 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:19:32 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:19:36 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:19:57 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:20:03 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:20:10 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:28:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.5ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.5ms | Allocations: 2029)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:29:49 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.2ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:29:55 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:30:03 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:30:20 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/api/v1/bagels" for ::1 at 2021-02-07 19:30:29 -0500
+Processing by Api::V1::BagelsController#index as */*
+  [1m[36mApi::V1::Bagel Load (0.3ms)[0m  [1m[34mSELECT "api_v1_bagels".* FROM "api_v1_bagels"[0m
+  ↳ app/controllers/api/v1/bagels_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
