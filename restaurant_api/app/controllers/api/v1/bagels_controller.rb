@@ -5,23 +5,23 @@ class Api::V1::BagelsController < ApplicationController
     end
 
     def create
-        @production = Production.new(production_params)
-        @production.save
+        @bagel = Api::V1::Bagel.new(bagel_params)
+        @bagel.save
+        render json: @bagel, except: [:created_at, :updated_at, :description]
     end
 
     def update
-    if params[:item] 
-            @bagel = Api::V1::Bagel.find_by_id(params[:id]) 
-            @bagel.update(quantity: @bagel.quantity - params[:item][:ordered])     
-    else
-        @bagel = Api::V1::Bagel.find_by_id(params[:id])
-        @likes = @bagel.likes
-        @likes = @likes + 1
-        @bagel.update(likes: @likes )
-    end
+        if params[:item] 
+                @bagel = Api::V1::Bagel.find_by_id(params[:id]) 
+                @bagel.update(quantity: @bagel.quantity - params[:item][:ordered])     
+        else
+            @bagel = Api::V1::Bagel.find_by_id(params[:id])
+            @likes = @bagel.likes
+            @likes = @likes + 1
+            @bagel.update(likes: @likes )
+        end
 
-    render json: @bagel, except: [:created_at, :updated_at, :description]
-
+        render json: @bagel, except: [:created_at, :updated_at, :description]
     end 
 
 
