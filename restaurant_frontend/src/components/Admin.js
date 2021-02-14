@@ -11,7 +11,7 @@ function Admin() {
     <div>
       {bagels.map((bagel, index) => {
         return (
-          <div>
+          <div key={index}>
             <Card style={{ width: "17rem" }}>
               <Card.Img variant="top" src={bagel.image} alt={bagel.name} />
               <Card.Body>

@@ -32,7 +32,7 @@ export const updateBagel = (id, index) => {
   };
 };
 
-export const deleteBagel = (id, index) => {
+export const deleteBagel = (id) => {
   return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/bagels/${id}`, {
       method: "DELETE",

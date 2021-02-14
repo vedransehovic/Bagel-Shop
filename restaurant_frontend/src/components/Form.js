@@ -48,13 +48,25 @@ class AdminForm extends React.Component {
     fetch("http://localhost:3000/api/v1/bagels", configObj)
       .then((response) => response.json())
       .then((object) => {
-        console.log(object);
+        this.setState({
+          createdBagelName: object.name,
+          createdBagelImage: object.image,
+          createdBagelQuantity: object.quantity,
+          createdBagelPrice: object.price,
+        });
       });
   };
 
   render() {
     return (
       <div>
+        <div>
+          {this.state.createdBagelName ? <h2>New Bagel Created</h2> : ""}
+          {this.state.createdBagelName} <br />
+          {this.state.createdBagelQuantity} <br />
+          {this.state.createdBagelPrice} <br />
+        </div>
+
         <h1>New Bagel</h1>
         <Form onSubmit={(event) => this.handleSubmit(event)}>
           <Form.Group controlId="formBasicEmail">
@@ -105,13 +117,6 @@ class AdminForm extends React.Component {
             Create
           </Button>
         </Form>
-
-        <div>
-          Name: {this.state.name} <br />
-          Image: {this.state.image} <br />
-          Quantity: {this.state.quantity} <br />
-          Price: {this.state.price} <br />
-        </div>
       </div>
     );
   }
