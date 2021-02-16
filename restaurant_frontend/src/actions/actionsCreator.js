@@ -53,12 +53,6 @@ export const deleteBagel = (id) => {
   };
 };
 
-export const createBagel = (e) => {
-  e.preventDefault();
-  debugger;
-  console.log(e);
-};
-
 export const updateOrder = (order) => {
   return (dispatch) => {
     const promises = order.map((item) => {

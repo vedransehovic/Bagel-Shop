@@ -6,6 +6,7 @@ class Api::V1::BagelsController < ApplicationController
 
     def create
         @bagel = Api::V1::Bagel.new(bagel_params)
+        @bagel.likes = 0
         @bagel.save
         render json: @bagel, except: [:created_at, :updated_at, :description]
     end
@@ -40,7 +41,7 @@ def order_params
 end
 
 def bagel_params
-    params.require(:bagel).permit(:name, :image, :quantity, :price)
+    params.require(:bagel).permit(:name, :image, :quantity, :price, :likes)
 end
 
 end

@@ -112,7 +112,6 @@ class AdminForm extends React.Component {
             />
             <Form.Text className="text-muted"></Form.Text>
           </Form.Group>
-
           <Button variant="primary" type="submit">
             Create
           </Button>

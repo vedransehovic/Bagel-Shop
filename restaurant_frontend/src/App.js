@@ -6,7 +6,7 @@ import BagelContainer from "./containers/BagelContainer";
 import TopBagelsContainer from "./containers/TopBagelsContainer";
 import { connect } from "react-redux";
 import { getBagels } from "./actions/actionsCreator";
-import Description from "./components/ProjectDescription";
+import Description from "./containers/ProjectDescription";
 
 class App extends Component {
   componentDidMount() {

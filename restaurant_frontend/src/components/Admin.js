@@ -17,7 +17,7 @@ function Admin() {
               <Card.Body>
                 <Card.Title>{bagel.name}</Card.Title>
                 <Card.Text></Card.Text>
-                <Button>Edit</Button>&nbsp;
+
                 <Button onClick={() => dispatch(deleteBagel(bagel.id, index))}>
                   Delete
                 </Button>

@@ -13,11 +13,9 @@ function BagelContainer() {
       <Container>
         <Row>
           <Col>
-            <h1>This is BAGEL CONTAINER!</h1>
             <AllBagels />
           </Col>
           <Col>
-            <h1>ORDER CONTAINER</h1>
             <Order />
           </Col>
         </Row>

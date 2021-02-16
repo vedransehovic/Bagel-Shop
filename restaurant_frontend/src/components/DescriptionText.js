@@ -4,8 +4,8 @@ class Comment extends React.Component {
   render() {
     return (
       <>
-        <h2>Some text goes here</h2>
-        Project Description
+        <h2>Project Description</h2>
+
         <p>
           This is a final project for the FlatIron's Software Engineering
           Bootcamp. I envisioned it as a simplified web store with a rudimentary
@@ -31,7 +31,7 @@ class Comment extends React.Component {
           I have already started my second one which already goes a little
           easier. Practice makes perfect as they say.
         </p>
-        <button onClick={this.props.handleClick}>LIKE ME MORE</button>
+        {/* <button onClick={this.props.handleClick}>LIKE ME MORE</button> */}
       </>
     );
   }

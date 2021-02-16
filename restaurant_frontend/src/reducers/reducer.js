@@ -7,8 +7,6 @@ export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "SET_BAGELS":
       return { ...state, bagels: action.payload };
-    case "FAVORITE":
-      return { ...state };
 
     case "ADDTOORDER":
       let bagels = [...state.bagels];
@@ -50,8 +48,10 @@ export const reducer = (state = initialState, action) => {
     case "LIKE":
       let iLike = action.payload.index;
       let bagelsLike = [...state.bagels];
-      let bagelLike = {...bagelsLike.find((bagel) => (bagel.id === action.payload.data.id))};
-      bagelLike.likes++
+      let bagelLike = {
+        ...bagelsLike.find((bagel) => bagel.id === action.payload.data.id),
+      };
+      bagelLike.likes++;
       let likedBagels = [
         ...bagelsLike.slice(0, iLike),
         bagelLike,
