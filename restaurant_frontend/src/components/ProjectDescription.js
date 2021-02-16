@@ -1,4 +1,5 @@
 import React from "react";
+import Comment from "./DescriptionText";
 
 class Description extends React.Component {
   state = {
@@ -14,9 +15,13 @@ class Description extends React.Component {
   render() {
     return (
       <div>
-        <h1>This Is Project Description</h1>
-        <h2>{this.state.likes}</h2>
-        <button onClick={this.handleClick}>LIKE ME MORE</button>
+        <div>
+          <h1>This Is Project Description</h1>
+          <h2>{this.state.likes}</h2>
+        </div>
+        <div>
+          <Comment likes={this.state.likes} handleClick={this.handleClick} />
+        </div>
       </div>
     );
   }
